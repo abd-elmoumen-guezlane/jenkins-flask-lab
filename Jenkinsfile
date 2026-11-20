@@ -23,7 +23,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'docker run --rm ${IMAGE_NAME}:${BUILD_NUMBER} pytest -v'
+                sh 'docker run --rm ${IMAGE_NAME}:${BUILD_NUMBER} python -m pytest -v'
             }
         }
 
@@ -55,7 +55,7 @@ pipeline {
         }
 
         failure {
-            echo 'Pipeline failed. Check the stage that reported an error.'
+            echo 'Pipeline failed. Check the stage that reported the error.'
         }
     }
 }
