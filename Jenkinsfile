@@ -5,7 +5,7 @@ pipeline {
     environment {
         IMAGE_NAME = 'jenkins-flask-lab'
         CONTAINER_NAME = 'jenkins-flask-app'
-        APP_PORT = '8080'
+        APP_PORT = '8081'
     }
 
     stages {
